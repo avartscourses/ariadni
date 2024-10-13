@@ -24,13 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
     scene.add(light);
 
     // Load the raccoon 3D model
-    const raccoon = await loadGLTF('./assets/models/musicband-raccoon/scene.gltf');
+    const raccoon = await loadGLTF('./assets/models/musicband-bear/scene.gltf');
     
     raccoon.scene.scale.set(0.1, 0.1, 0.1);  // Scale the model
     raccoon.scene.position.set(0, -0.4, 0);  // Set the model's position in the scene
 
     // Load the bear 3D model
-    const bear = await loadGLTF('./assets/models/musicband-bear/scene.gltf');
+    const bear = await loadGLTF('./assets/models/musicband-raccoon/scene.gltf');
     bear.scene.scale.set(0.1, 0.1, 0.1);
     bear.scene.position.set(0, -0.4, 0);
 
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     raccoonAnchor.group.add(raccoon.scene);
 
     // Load and add audio to the raccoon target
-    const audioClip1 = await loadAudio('./assets/sounds/musicband-background.mp3');
+    const audioClip1 = await loadAudio('./assets/sounds/ariadne.mp3');
     const listener1 = new THREE.AudioListener();
     camera.add(listener1);
     const audio1 = new THREE.PositionalAudio(listener1);
